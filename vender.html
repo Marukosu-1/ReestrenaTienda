@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="Stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    
+
+</head>
+
+
+<header>
+  <!-- navbar-expand-sm activa el menú normal a partir del tamaño 'sm' (576px en adelante) -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo y Marca -->
+      <a class="navbar-brand d-flex flex-column align-items-center text-center m-0 p-1 text-warning" href="#">
+        <img src="img/logoreestrena.jpeg" style="height: 40px; width: auto; border-radius: 8px; margin-bottom: 4px;" alt="Logo Reestrena">
+        <span style="font-size: 0.9rem; font-weight: 600;">Reestrena</span>
+      </a>
+
+      <!-- Botón Toggler visible SOLO en móviles pequeños (menores a 'sm') -->
+      <button class="navbar-toggler border-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Offcanvas que actúa como lateral en móvil y barra desplegada desde 'sm' en adelante -->
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-warning" id="offcanvasNavbarLabel">Reestrena</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <div class="offcanvas-body">
+          <!-- Enlaces de navegación (me-auto empuja todo lo demás hacia la derecha) -->
+          <ul class="navbar-nav me-auto mb-2 mb-sm-0 mx-sm-4">
+            <li class="nav-item">
+              <a class="nav-link active text-warning fw-bolder" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-warning fw-bolder" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Explorar
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="explorar.html">Hombre</a></li>
+                <li><a class="dropdown-item" href="explorar.html">Mujer</a></li>
+                <li><a class="dropdown-item" href="explorar.html">Niños</a></li>
+                <li><a class="dropdown-item" href="explorar.html">Acessorios</a></li>
+                <li><a class="dropdown-item" href="explorar.html">Ofertas</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="explorar.html">Y mas..</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-warning fw-bolder" href="vender.html">Vender</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-warning fw-bolder" href="cuenta.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cuenta
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="cuenta.html">Mis compras</a></li>
+                <li><a class="dropdown-item" href="cuenta.html">Mis publicaciones</a></li>
+                <li><a class="dropdown-item" href="cuenta.html">Favoritos</a></li>
+                <li><a class="dropdown-item" href="cuenta.html">Datos</a></li>
+              </ul>
+            </li>   
+
+            <li class="nav-item">
+              <a class="nav-link text-warning fw-bolder" href="contacto.html">Contactos</a>
+            </li>
+          </ul>
+
+          <!-- Buscador alineado a la derecha -->
+          <form class="d-flex mt-3 mt-sm-0 ms-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-warning" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+     <section >
+            <div class="text-center mb-5  " >
+            <h1 class="display-5 fw-bold">Formulario Para Ventas</h1>
+            <p class="lead text-muted">Si deseas vender tus prendas, llena el siguiente formulario y nos pondremos en contacto contigo.</p>
+        </div>
+            <form class="formul">
+                <fieldset>
+                    <legend>Información Basica</legend>           
+                    <div class="form_imput">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" placeholder="Nombre completo" id="nombre">
+                    </div>
+                    <div class="form_imput">
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="Email" id="email">
+                    </div>
+                    <div class="form_imput">
+                        <label for="celular">Numero de celular:</label>
+                        <input type="tel" placeholder="Numero de celular" id="celular">
+                    </div>
+                        <div class="form_imput">
+                        <label for="terminos"> Acepto los terminos y condiciones
+                        <input type="checkbox" class="checkbox">
+                        </label>
+                    </div>
+                    </div>
+                </fieldset>
+                        <div Class="form_imput">
+                            <label for="opciones">Estado de conservacion:
+                                <select name="opciones" id="opciones">
+                                <option value="">Estado de conservacion</option>
+                                <option value="opcion1">Bueno</option>
+                                <option value="opcion2">Regular</option>
+                                <option value="opcion3">Malo</option>
+                            </select>
+                            </label>
+                        </div>
+                        <div class="form_imput">
+                            <label for="Tipo">Tipo</label>
+                            <input type="tel" placeholder="Tipo de prenda" id="Tipo">
+                        </div>
+                        <div class="form_imput">
+                            <label for="Marca">Marca</label>
+                            <input type="tel" placeholder="Marca de la prenda" id="Marca">
+                        </div>
+                        <div class="form_imput">
+                            <label for="color">Color</label>
+                            <input type="tel" placeholder="Color de la prenda" id="color">
+                        </div>
+                        <div class="form_imput">
+                            <label for="Precio">Precio</label>
+                            <input type="tel" placeholder="Precio de la prenda" id="Precio">
+                        </div>
+                        <div class="form_imput">
+                            <label for="descripcion">Descripcion de la prenda:</label>
+                            <textarea rows="8" placeholder="Descripcion de la prenda" id="descripcion"></textarea>
+                        </div>
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <div class="campo-archivo">
+                            <label for="foto-perfil">Sube la fotografía de la prenda:</label>
+                            <input type="file" id="foto-perfil" name="foto" accept="image/*">
+                            </div>
+                        <div class="form_imput">
+                            <label for="color">Lugar de Entrega</label>
+                            <input type="tel" placeholder="Lugar" id="color">
+                        </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+    </section>
+
+</body>
+
+
+
+
+
+ <footer class="mt-auto bg-dark border-top py-2 text-center text-secondary">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Reestrena. Todos los derechos reservados.</p>
+      <small> Calle Isaac Albeniz 238/ San Borja - Maria Pia Pereira, Lima</small>
+    </div>
+  </footer>
+
+
+</html>

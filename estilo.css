@@ -1,0 +1,79 @@
+
+body { 
+    margin: 0px; 
+    color: lightblue;
+    font-family: sans-serif;
+    
+}
+
+section{
+    margin-top: 110px;
+}
+
+.formul {  
+    background: #f5f5f5; 
+    padding: 20px;
+    max-width: 500px; 
+    border-radius: 8px; 
+    margin: 35px auto; 
+    margin-top: 50px;
+    box-shadow: 0 0 55px rgba(60, 59, 59, 0.5);
+    font-size: 16px;
+    color: rgb(66, 64, 64);
+}
+h2 { 
+    text-align: center; 
+    margin:0;
+    margin-bottom: 10px; 
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+
+.from_imput { 
+    padding: 6px 20px; 
+}
+
+input, textarea, select { 
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 6px 8px; 
+    border: none; 
+    border: 1px solid #2a282a;
+    box-shadow: 0 0 15px rgba(60, 59, 59, 0.5);
+    background: transparent; 
+    border-radius: 4px; 
+    color:rgb(11, 11, 11);
+    margin: 6px;
+}
+
+option { 
+    background: #181718;  
+}
+
+textarea { 
+    min-width: 100%;
+    resize: none;
+    min-height: 102px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+label {
+    font-size: 0.9em;
+    line-height: 2em;
+}
+
+.checkbox { 
+    width: auto; 
+    heitght: auto;
+}
+
+fieldset { 
+    margin: 0;
+    border: 1px solid #73346b; 
+    padding: 0 20px 20px 20px;
+    margin-bottom: 20px;
+    Border-radius: 5px;
+}

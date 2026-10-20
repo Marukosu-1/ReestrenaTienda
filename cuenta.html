@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mi cuenta | reestrena.pe</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Carga limpia de Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+:root{--bg:#f3ece4;--surface:#fffdfa;--ink:#2a2430;--muted:#6f6877;--line:#e2d7cb;--brand:#5b3a78;--brand-ink:#fff;--accent:#d9a441;--ok:#2f7d5b;--warn:#8a5a0c;
+--c1:#e8c3d3;--c2:#d4c0ec;--c3:#f1d9ae;--c4:#c3d6ea;--dark:#2a2430;--dark-ink:#f1ecf5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1822;--surface:#262030;--ink:#f1ecf5;--muted:#aaa2b4;--line:#3a3245;--brand:#c9a7ea;--brand-ink:#1c1822;--accent:#e6b85a;--ok:#6fcf9f;--warn:#e6b85a;--c1:#4a3340;--c2:#3f3452;--c3:#4d4230;--c4:#33425a;--dark:#120f17;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c1822;--surface:#262030;--ink:#f1ecf5;--muted:#aaa2b4;--line:#3a3245;--brand:#c9a7ea;--brand-ink:#1c1822;--accent:#e6b85a;--ok:#6fcf9f;--warn:#e6b85a;--c1:#4a3340;--c2:#3f3452;--c3:#4d4230;--c4:#33425a;--dark:#120f17;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Figtree,system-ui,Arial,sans-serif}
+a{color:inherit}
+h1,h2,h3,h4,h5{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.15}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn-custom{display:inline-block;padding:9px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 14px Figtree,sans-serif;text-decoration:none;cursor:pointer}
+.btn-custom.primary{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.btn-custom:hover{filter:brightness(.95)}
+
+/* Header & Carrusel Fix */
+header{z-index:1030}
+.slider{position:relative;overflow:hidden;background:var(--dark);margin-top:68px;z-index:1}
+.slides{display:flex;transition:transform .6s ease}
+.slide{flex:0 0 100%;min-height:260px;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 70px;color:#2a2430}
+.slide h2{font-size:clamp(24px,4vw,38px)}
+.slide p{margin:8px 0 0;font-size:17px}
+.s1{background:linear-gradient(120deg,#e8c3d3,#d4c0ec)}
+.s2{background:linear-gradient(120deg,#f1d9ae,#e8c3d3)}
+.s3{background:linear-gradient(120deg,#c3d6ea,#d4c0ec)}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(42,36,48,.55);color:#fff;font-size:20px;cursor:pointer;z-index:2}
+.prev{left:14px}.next{right:14px}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:2}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(42,36,48,.35);padding:0;cursor:pointer}
+.dots button[aria-current="true"]{background:#2a2430}
+
+/* Avatar y usuario */
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:600}
+
+/* Contenido */
+.alert-box{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:28px;padding:12px 16px;border-radius:10px;background:var(--c3);color:#3b2d10;text-align:center}
+.alert-box button{border:0;background:none;font-size:20px;line-height:1;cursor:pointer;color:inherit}
+.intro{text-align:center;margin:34px 0 26px}
+.intro h1{font-size:clamp(30px,5vw,44px)}
+.intro p{color:var(--muted);margin:10px auto 0;max-width:56ch;font-size:16px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.stat b{display:block;font:700 24px Fraunces,Georgia,serif}
+.stat span{font-size:13px;color:var(--muted)}
+.stat.balance{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.stat.balance span{color:inherit;opacity:.85}
+section{margin-top:40px}
+.head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.head h2{font-size:22px}
+.head a{font-size:14px;color:var(--brand);font-weight:600}
+.cards,.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card-item{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:14px;border:1px solid var(--line);min-height:190px}
+.card-item .ic{font-size:30px}
+.card-item h3{font-size:19px}
+.card-item p{margin:0 0 12px;font-size:14px;opacity:.8}
+.card-item .btn-custom{margin-top:auto;align-self:flex-start;background:var(--surface)}
+.k1{background:var(--c4);color:#2a2430}.k2{background:var(--c2);color:#2a2430}.k3{background:var(--c1);color:#2a2430}.k4{background:var(--c3);color:#2a2430}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 18px}
+.panel-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.panel-row:last-child{border:0}
+.panel-row .t{flex:1;min-width:0}
+.panel-row .t b{display:block;font-weight:600}
+.panel-row .t span{font-size:13px;color:var(--muted)}
+.tag{font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--bg);white-space:nowrap}
+.tag.ok{color:var(--ok)}.tag.wait{color:var(--warn)}
+.price{font-weight:600}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.sw{height:130px;display:grid;place-items:center;font-size:46px}
+.prod .i{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.prod b{font-weight:600}
+.prod span{font-size:13px;color:var(--muted)}
+.prod .price{margin:4px 0 10px}
+.prod .btn-custom{align-self:flex-start;margin-top:auto}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}
+.info h4{font-size:18px}
+.info p{color:var(--muted);margin:6px 0 0}
+.news{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px 20px;text-align:center}
+.news p{color:var(--muted);margin:6px 0 16px}
+.news form{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.news input{padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:15px Figtree,sans-serif;min-width:240px}
+#ok{color:var(--ok);font-weight:600;margin-top:12px}
+footer{background:var(--dark);color:var(--dark-ink);margin-top:48px;padding:26px 20px;text-align:center;font-size:14px}
+
+@media (max-width:900px){
+  .cards,.prods,.stats{grid-template-columns:repeat(2,1fr)}
+  .info{grid-template-columns:1fr}
+  .slide{padding:40px 56px}
+}
+@media (max-width:480px){.cards,.prods{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.slides{transition:none}}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex flex-column align-items-center text-center m-0 p-1 text-warning" href="#">
+        <img src="img/logoreestrena.jpeg" style="height: 40px; width: auto; border-radius: 8px; margin-bottom: 4px;" alt="Logo Reestrena">
+        <span style="font-size: 0.9rem; font-weight: 600;">Reestrena</span>
+      </a>
+
+      <button class="navbar-toggler border-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-warning" id="offcanvasNavbarLabel">Reestrena</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-sm-0 mx-sm-4">
+            <li class="nav-item">
+              <a class="nav-link active text-warning fw-bolder" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-warning fw-bolder" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Explorar
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="explorar.html">Hombre</a></li>
+                <li><a class="dropdown-item" href="explorar.html">Mujer</a></li>
+                <li><a class="dropdown-item" href="explorar.html">Niños</a></li>
+                <li><a class="dropdown-item" href="explorar.html">Accesorios</a></li>
+                <li><a class="dropdown-item" href="explorar.html">Ofertas</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="explorar.html">Y más..</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-warning fw-bolder" href="vender.html">Vender</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-warning fw-bolder" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cuenta
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="cuenta.html">Mis compras</a></li>
+                <li><a class="dropdown-item" href="cuenta.html">Mis publicaciones</a></li>
+                <li><a class="dropdown-item" href="cuenta.html">Favoritos</a></li>
+                <li><a class="dropdown-item" href="cuenta.html">Datos</a></li>
+              </ul>
+            </li>   
+
+            <li class="nav-item">
+              <a class="nav-link text-warning fw-bolder" href="contacto.html">Contactos</a>
+            </li>
+          </ul>
+
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mt-1 ms-auto">
+            <span class="avatar" aria-hidden="true">EP</span>
+            <span class="text-white">Edgardo Pozo</span>
+            <a class="btn-custom" href="index.html">Cerrar sesión</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="slider" id="sl" role="region" aria-roledescription="carrusel" aria-label="Novedades de tu cuenta">
+  <div class="slides" id="track">
+    <div class="slide s1"><div><h2>Bienvenido a tu cuenta, Edgardo</h2><p>Gestiona tus ventas, pedidos y favoritos en un solo lugar.</p></div></div>
+    <div class="slide s2"><div><h2>Vende más rápido</h2><p>Las prendas con 4 fotos se venden antes. Súbelas hoy.</p></div></div>
+    <div class="slide s3"><div><h2>Compra y vende con seguridad</h2><p>Tus pagos quedan protegidos hasta que el pedido llega.</p></div></div>
+  </div>
+  <button class="arrow prev" id="pv" aria-label="Anterior">‹</button>
+  <button class="arrow next" id="nx" aria-label="Siguiente">›</button>
+  <div class="dots" id="dots"></div>
+</div>
+
+<main class="wrap">
+  <div class="alert-box" id="al" role="status">
+    <span><strong>¡Semana de ventas!</strong> Publica 3 prendas y destaca tu tienda gratis.</span>
+    <button id="ax" aria-label="Cerrar aviso">×</button>
+  </div>
+
+  <div class="intro">
+    <h1>Mi cuenta</h1>
+    <p>Hola, Edgardo. Revisa tus publicaciones, pedidos, favoritos y datos de envío.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat balance"><b>S/ 145.00</b><span>Balance en cuenta</span></div>
+    <div class="stat"><b>4.9 / 5.0</b><span>Reputación vendedora</span></div>
+    <div class="stat"><b>12</b><span>Publicaciones activas</span></div>
+    <div class="stat"><b>3</b><span>Pedidos por enviar</span></div>
+  </div>
+
+  <section aria-label="Opciones de mi cuenta">
+    <div class="cards">
+      <div class="card-item k1"><span class="ic" aria-hidden="true">📦</span><h3>Mis compras</h3><p>Revisa tus pedidos y su estado.</p><a class="btn-custom" href="pedidos.html">Ver pedidos</a></div>
+      <div class="card-item k2"><span class="ic" aria-hidden="true">👗</span><h3>Mis publicaciones</h3><p>Administra las prendas que vendes.</p><a class="btn-custom" href="publicaciones.html">Gestionar</a></div>
+      <div class="card-item k3"><span class="ic" aria-hidden="true">💗</span><h3>Favoritos</h3><p>Las prendas que guardaste.</p><a class="btn-custom" href="favoritos.html">Ver favoritos</a></div>
+      <div class="card-item k4"><span class="ic" aria-hidden="true">👤</span><h3>Mis datos</h3><p>Perfil y dirección de envío.</p><a class="btn-custom" href="datos.html">Editar datos</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><h2>Pedidos recientes</h2><a href="pedidos.html">Ver todos</a></div>
+    <div class="panel">
+      <div class="panel-row"><div class="t"><b>Casaca de jean vintage</b><span>Pedido #1048 · Lima</span></div><span class="price">S/ 85</span><span class="tag wait">Por enviar</span></div>
+      <div class="panel-row"><div class="t"><b>Vestido floral verano</b><span>Pedido #1045 · Arequipa</span></div><span class="price">S/ 60</span><span class="tag wait">Por enviar</span></div>
+      <div class="panel-row"><div class="t"><b>Polera oversize gris</b><span>Pedido #1041 · Piura</span></div><span class="price">S/ 45</span><span class="tag ok">Entregado</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><h2>Tus prendas en venta</h2><a href="publicaciones.html">Ver todas</a></div>
+    <div class="prods">
+      <article class="prod"><div class="sw" style="background:var(--c4)" aria-hidden="true">🧥</div><div class="i"><b>Casaca de jean</b><span>Talla M · Muy buen estado</span><span class="price">S/ 85.00</span><a class="btn-custom primary" href="publicaciones.html">Editar</a></div></article>
+      <article class="prod"><div class="sw" style="background:var(--c1)" aria-hidden="true">👗</div><div class="i"><b>Vestido floral</b><span>Talla S · Como nuevo</span><span class="price">S/ 60.00</span><a class="btn-custom primary" href="publicaciones.html">Editar</a></div></article>
+      <article class="prod"><div class="sw" style="background:var(--c3)" aria-hidden="true">👕</div><div class="i"><b>Polera oversize</b><span>Talla L · Buen estado</span><span class="price">S/ 45.00</span><a class="btn-custom primary" href="publicaciones.html">Editar</a></div></article>
+      <article class="prod"><div class="sw" style="background:var(--c2)" aria-hidden="true">👖</div><div class="i"><b>Pantalón cargo</b><span>Talla 30 · Muy buen estado</span><span class="price">S/ 70.00</span><a class="btn-custom primary" href="publicaciones.html">Editar</a></div></article>
+    </div>
+  </section>
+
+  <section class="info" aria-label="Protección">
+    <div><h4>🛡️ Pago protegido</h4><p>Retención segura de fondos en cada venta</p></div>
+    <div><h4>🚚 Envíos en Perú</h4><p>Seguimiento hasta la puerta del comprador</p></div>
+    <div><h4>↩️ Ayuda siempre</h4><p>Soporte si surge un problema con tu pedido</p></div>
+  </section>
+
+  <section class="news my-3">
+    <h4>Consejos para vender más</h4>
+    <p>Suscríbete y recibe ideas para fotografiar y fijar el precio de tus prendas.</p>
+    <form id="nf"><input type="email" id="em" placeholder="Tu correo" aria-label="Tu correo" required><button class="btn-custom primary" type="submit">Suscribirme</button></form>
+    <div id="ok" role="status"></div>
+  </section>
+</main>
+
+<footer class="mt-auto bg-dark border-top py-3 text-center text-secondary">
+  <div class="container">
+    <p class="mb-1 text-white-50">&copy; 2026 Reestrena. Todos los derechos reservados.</p>
+    <small class="text-white-50">Calle Isaac Albeniz 238 / San Borja - Maria Pia Pereira, Lima</small>
+  </div>
+</footer>
+
+<script>
+// Script del Carrusel
+var i=0, n=3, tr=document.getElementById('track'), dt=document.getElementById('dots'), sl=document.getElementById('sl'), hold=false, btns=[];
+
+for(var k=0; k<n; k++){
+  (function(k){
+    var b=document.createElement('button');
+    b.setAttribute('aria-label','Ir a la diapositiva '+(k+1));
+    b.onclick=function(){go(k)};
+    dt.appendChild(b);
+    btns.push(b);
+  })(k);
+}
+
+function go(x){
+  i=(x+n)%n;
+  tr.style.transform='translateX(-'+i*100+'%)';
+  btns.forEach(function(b,j){
+    b.setAttribute('aria-current', j===i);
+  });
+}
+
+document.getElementById('pv').onclick=function(){go(i-1)};
+document.getElementById('nx').onclick=function(){go(i+1)};
+sl.onmouseenter=function(){hold=true};
+sl.onmouseleave=function(){hold=false};
+
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  setInterval(function(){if(!hold)go(i+1)},5000);
+}
+go(0);
+
+// Aviso y formulario
+document.getElementById('ax').onclick=function(){document.getElementById('al').style.display='none'};
+document.getElementById('nf').onsubmit=function(e){
+  e.preventDefault();
+  document.getElementById('ok').textContent='¡Listo! Te escribiremos a '+document.getElementById('em').value+'.';
+  this.reset();
+};
+</script>
+
+</body>
+</html>
