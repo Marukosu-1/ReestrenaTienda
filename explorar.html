@@ -37,21 +37,21 @@
 </style>
 
 <header>
-  <!-- navbar-expand-sm activa el menú normal a partir del tamaño 'sm' (576px en adelante) -->
+ 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <!-- Logo y Marca -->
+      
       <a class="navbar-brand d-flex flex-column align-items-center text-center m-0 p-1 text-warning" href="#">
         <img src="img/logoreestrena.jpeg" style="height: 40px; width: auto; border-radius: 8px; margin-bottom: 4px;" alt="Logo Reestrena">
         <span style="font-size: 0.9rem; font-weight: 600;">Reestrena</span>
       </a>
 
-      <!-- Botón Toggler visible SOLO en móviles pequeños (menores a 'sm') -->
+      
       <button class="navbar-toggler border-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Offcanvas que actúa como lateral en móvil y barra desplegada desde 'sm' en adelante -->
+      
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title text-warning" id="offcanvasNavbarLabel">Reestrena</h5>
@@ -59,7 +59,7 @@
         </div>
         
         <div class="offcanvas-body">
-          <!-- Enlaces de navegación (me-auto empuja todo lo demás hacia la derecha) -->
+        
           <ul class="navbar-nav me-auto mb-2 mb-sm-0 mx-sm-4">
             <li class="nav-item">
               <a class="nav-link active text-warning fw-bolder" aria-current="page" href="index.html">Inicio</a>
@@ -101,7 +101,7 @@
             </li>
           </ul>
 
-          <!-- Buscador alineado a la derecha -->
+         
           <form class="d-flex mt-3 mt-sm-0 ms-auto" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <button class="btn btn-outline-warning" type="submit"><i class="bi bi-search"></i></button>
@@ -115,7 +115,7 @@
 
 <div class="container my-2">
     <h2 class="text-center mb-4">Nuestros Productos</h2>
-    <!-- JavaScript va a rellenar este div automáticamente -->
+    
     <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4"></div>
 </div>
 
@@ -124,10 +124,10 @@
 
        <!--cuerpo-->
     <div class="card bg-dark text-white border-0 shadow">
-        <!-- Tu imagen -->
+       
         <img src="img/Gemini_Generated_Image_lhwmwylhwmwylhwm.jpg" class="card-img w-100" alt="Reestrena" style="height: 300px; object-fit: cover;">
     
-        <!-- Capa oscura semitransparente para que el texto resalte -->
+       
         <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center bg-dark bg-opacity-75">
         <h1 class="card-title fw-bold display-4 mt-5">Explora nuestros productos!</h1>
         <p class="card-text lead mb-4">¡Moda para una nueva oportunidad!</p>
@@ -152,23 +152,18 @@
 <div class="container my-5">
     <h2 class="text-start mb-4">Productos destacados</h2>
     
-    <!-- Rejilla de Bootstrap (Grid) 
-         row-cols-1: 1 columna en celulares
-         row-cols-md-3: 3 columnas en tablets
-         row-cols-lg-4: 4 columnas en pantallas grandes
-         g-4: espacio (gap) entre las tarjetas
-    -->
+    
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
         
         <!-- PRODUCTO 1 -->
         <div class="col">
             <div class="card h-100 shadow-sm">
-                <!-- Imagen del producto (puedes cambiar el src por tu imagen) -->
+             
                 <img src="img/jean1.webp" class="card-img-top" alt="Producto 1">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Jean Clasico</h5>
                     <p class="card-text text-muted small">Para uso diario o uso casual.</p>
-                    <!-- Precio y Botón alineados abajo -->
+                  
                     <div class="mt-auto">
                         <span class="fs-5 fw-bold text-dark d-block mb-2">S/.74.99</span>
                         <button class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2">
@@ -233,23 +228,17 @@
     </div>
     <h2 class="text-start mb-3 mt-2">Ofertas</h2>
     
-    <!-- Rejilla de Bootstrap (Grid) 
-         row-cols-1: 1 columna en celulares
-         row-cols-md-3: 3 columnas en tablets
-         row-cols-lg-4: 4 columnas en pantallas grandes
-         g-4: espacio (gap) entre las tarjetas
-    -->
-    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
         
         <!-- PRODUCTO 1 -->
         <div class="col">
             <div class="card h-100 shadow-sm">
-                <!-- Imagen del producto (puedes cambiar el src por tu imagen) -->
+              
                 <img src="img/bolso4.webp" class="card-img-top" alt="Producto 1">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Bolso</h5>
                     <p class="card-text text-muted small">Combina con tu estilo.</p>
-                    <!-- Precio y Botón alineados abajo -->
+                 
                     <div class="mt-auto">
                         <span class="fs-5 fw-bold text-dark d-block mb-2">$49.99</span>
                         <button class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2">

@@ -14,21 +14,21 @@
 
 
 <header>
-  <!-- navbar-expand-sm activa el menú normal a partir del tamaño 'md' (676px en adelante) -->
+  
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <!-- Logo y Marca -->
+    
       <a class="navbar-brand d-flex flex-column align-items-center text-center m-0 p-1 text-warning" href="#">
         <img src="img/logoreestrena.jpeg" style="height: 40px; width: auto; border-radius: 8px; margin-bottom: 4px;" alt="Logo Reestrena">
         <span style="font-size: 0.9rem; font-weight: 600;">Reestrena</span>
       </a>
 
-      <!-- Botón Toggler visible SOLO en móviles pequeños (menores a 'sm') -->
+      
       <button class="navbar-toggler border-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Offcanvas que actúa como lateral en móvil y barra desplegada desde 'sm' en adelante -->
+     
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title text-warning" id="offcanvasNavbarLabel">Reestrena</h5>
@@ -36,7 +36,7 @@
         </div>
         
         <div class="offcanvas-body">
-          <!-- Enlaces de navegación (me-auto empuja todo lo demás hacia la derecha) -->
+        
           <ul class="navbar-nav me-auto mb-2 mb-sm-0 mx-sm-4">
             <li class="nav-item">
               <a class="nav-link active text-warning fw-bolder" aria-current="page" href="index.html">Inicio</a>
@@ -78,7 +78,7 @@
             </li>
           </ul>
 
-          <!-- Buscador alineado a la derecha -->
+         
           <form class="d-flex mt-3 mt-sm-0 ms-auto" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <button class="btn btn-outline-warning" type="submit"><i class="bi bi-search"></i></button>
@@ -92,10 +92,10 @@
 <body>
     <!--cuerpo-->
     <div class="card bg-dark text-white border-0 shadow">
-  <!-- Tu imagen -->
+ 
     <img src="img/slider1.jpg" class="card-img w-100" alt="Fondo Contáctenos" style="height: 400px; object-fit: cover;">
   
-  <!-- Capa oscura semitransparente para que el texto resalte -->
+
   <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center bg-dark bg-opacity-50">
     <h1 class="card-title fw-bold display-4 mb-3" >¡Contáctenos!</h1>
     <p class="card-text lead mb-4">Estamos aquí para resolver todas tus dudas.</p>
@@ -111,7 +111,7 @@
     <div class="container my-4">
   <div class="row g-4 justify-content-center">
       
-      <!-- PRIMERA TARJETA (Aceptados) -->
+     
       <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center">
         <div class="card border-0 shadow-lg rounded-4 p-3 w-100" style="max-width: 22rem; height: 35rem;">
           <div class="card-body d-flex flex-column text-center">
@@ -145,7 +145,7 @@
         </div>
       </div>
 
-      <!-- SEGUNDA TARJETA (No aceptados) -->
+    
       <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center" >
         <div class="card border-0 shadow-lg rounded-4 p-3 w-100" style="max-width: 23.8rem; height: 35rem;">
           <div class="card-body d-flex flex-column text-center">
@@ -179,13 +179,13 @@
         </div>
       </div>
 
-  </div> <!-- Cierre correcto del row -->
+  </div>
 </div>
 
 
     <div class="row g-4 align-items-stretch" id="formulario">
       
-      <!-- Columna 1: Formulario de Contacto -->
+      
       <div class="col-12 col-lg-6 d-flex flex-column" >
         <div class="card shadow-sm border-0 contenedor-tarjeta-contacto p-4 p-md-5 bg-body">
           <div class="d-flex align-items-center gap-2 mb-4">
@@ -261,11 +261,10 @@
         </div>
       </div>
 
-     <!-- Columna 2: Mapa y Sedes -->
       <div class="col-md-6">
         <div class="card shadow-sm border-0">
           
-          <!-- Cabecera del Mapa -->
+         
           <div class="p-3 border-bottom d-flex d-flex justify-content-between align-items-center ">
             <h2 class="h5 fw-bold mb-0">
               <i class="bi bi-geo-alt-fill text-danger"></i> Nuestros Locales
@@ -273,12 +272,12 @@
             <span class="badge bg-light text-secondary border   ">San Borja, Lima, Perú</span>
           </div>
 
-          <!-- Iframe de Google Maps -->
+         
           <div class="p-3 text-center">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2016.1770674773388!2d-77.001119603871!3d-12.103624764910094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2spe!4v1792187605835!5m2!1ses!2spe" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
 
-          <!-- Botones de Cómo llegar -->
+         
           <div class="p-3 border-top">
             <p class="text-secondary fw-bold mb-2">
               <i class="bi bi-box-arrow-up-right text-success"></i> Cómo llegar (Google Maps):
